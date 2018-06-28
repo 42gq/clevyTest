@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ClevyTest</title>
+        <script src="body/Buttons.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css" media="all">
+    </head>         
+    <body>          
+        <script type="text/javascript" src="background.js"></script>
+        <div class="cover">
+            <div class="hello">Yolo</div>
+            <div class="main">
+                    <button class="list" onclick="MyButtonsFunction()">Show List</button>
+                <div class="background"></div>
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front">
+                                <!-- front content -->
+                                <div class="chatBox">
+                                    <div class="chatWindow"></div>
+                                    <div class="textImput"><input class="question" name="question" placeholder="Your question here"></imput><button class="ask" onclick="MyButtonsFunction()">Ask !</button></div>
+                                </div>
+                            </div>
+                            <!-- back content -->
+                            <div class="back">
+                                <div class="boxLis">
+                                    <div class="intentsLis"></div>
+                                    <button class="buttonAdd"></button>
+                                    <button class="buttonDelete"></button>
+                                    <button class="buttonEdit"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class=footer></div>
+        </div>
+    </body>
+    </html>
+    
+<!---
+    Bonjour!
+-->

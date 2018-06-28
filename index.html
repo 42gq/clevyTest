@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ClevyTest</title>
+        <script src="body/Buttons.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css" media="all">
+    </head>         
+    <body>          
+        <script type="text/javascript" src="background.js"></script>
+        <div class="cover">
+            <div class="hello"></div>
+            <div class="main">
+                    <!-- <button class="list" onclick="console.log(this);console.log(this.parentNode)">Show List</button> -->
+                    <button class="list">Show List</button>
+                <div class="background"></div>
+                <div class="flip-container">
+                        <div class="flipper">
+                            <div class="front">
+                                <!-- front content -->
+                                <div class="chatBox">
+                                    <div class="chatWindow"></div>
+                                    <div class="textImput"><input class="question" name="question" placeholder="Your question here"></imput><button class="ask" onclick="MyButtonsFunction()">Ask !</button></div>
+                                </div>
+                            </div>
+                            <!-- back content -->
+                            <div class="back">
+                                <div class="boxLis">
+                                    <div class="intentsLis"></div>
+                                    <button class="buttonAdd"></button>
+                                    <button class="buttonDelete"></button>
+                                    <button class="buttonEdit"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class=footer></div>
+            <script>
+                window.onload = () => {
+                    document.querySelector(".list").onclick = () => {
+                        MyButtonsFunction();
+                        var container = document.querySelector('.flip-container');
+                        if (container.style.transform == "rotateY(180deg)")
+                            container.style.transform = "";
+                        else
+                            container.style.transform == "rotateY(180deg)";
+                    }
+                }
+                </script>
+        </div>
+    </body>
+    </html>
+    
+<!---
+    Bonjour!
+-->
