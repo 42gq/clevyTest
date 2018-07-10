@@ -1,0 +1,222 @@
+body {
+    overflow: visible;
+    border: 0px;
+    margin: 0px;
+    display: block;
+}
+.cover {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.background {
+    height : 60%;
+    margin-top: 6%;
+}
+.main {
+    /* display: block; */
+    position: fixed;
+    height:auto;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    overflow: auto;
+    border-top: 1px solid rgb(118, 141, 241);
+    width: 100%;
+    /* height: 100%; */
+    align-items: center;
+    text-align: center;
+}
+
+.header {
+    position: fixed;
+    display: grid;
+    border-bottom: 1px solid rgb(118, 141, 241);
+    background-color: black;
+    top: 0;
+    left:0;
+    right:0;
+    color: white;
+    background-size:cover;
+    width: 100%;
+    height: 50px;
+}
+.footer {
+    position : fixed;
+    height: 2%;
+    right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	border-top: 1px solid rgb(118, 141, 241);
+	color: #757575;
+	background-color: black;
+	text-align: center;
+	display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+}
+
+.chatBox, .boxLis{
+    border-radius: 10px;    
+    background-color: whitesmoke;
+    border-width: 10px;
+    height: 850px;
+    width: 100%;
+    align-items: horizontal;
+    text-align: horizontal;
+}
+
+.chatWindow {
+    border-bottom: 1px solid black;
+    height: 94%;
+}
+.textImput {
+    width:100%;
+    height: 6%;
+    border: 1%;
+    border-radius: 10px;
+}
+.list {
+    outline:none;
+    z-index: 10;
+    position : relative;
+    font-size:large;
+    border-radius: 100px;
+    height: 100px;
+    width: 100px;
+    border: 2px solid rgb(124, 149, 248);
+    background-color: rgb(202, 217, 247);   
+    margin-bottom: -10%;
+    padding: 10px;
+    
+}
+
+.ask {
+    height:99%;
+    margin:0%;
+    border:0%;
+    padding: 0%;
+    width:20%;
+    border-bottom-right-radius: 10px;
+    align-items: center;
+    text-align: center;
+    font-size: large;
+    background-color: white;
+    overflow: hidden;
+}
+
+.question {
+    font-size: large;
+    margin: 0px;
+    padding-left: 4%;
+    border: 0px;
+    border-bottom-left-radius: 10px;
+    text-align:left;
+    width: 75%;
+    height: 99%;
+    overflow: hidden;
+}
+
+.boxLis {
+    width: 100%;
+    border: 2px solid rgb(118, 141, 241);
+    height: 850px;
+    
+}
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 2000px;
+}
+/* flip the pane when hovered */
+.flip-container.test .flipper{
+    transform: rotateY(180deg);
+}
+
+.flip-container{
+    border-radius: 10px;    
+    border-width: 10px;
+    height: 850px;
+    min-width : 400px;
+    max-width : 800px;
+    margin-left:30%;
+    margin-right:30%;
+    width: 40%;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+    width: 100%;
+	position: absolute;
+}
+
+/* front pane, placed above back */
+.front {
+	/* z-index: 2; */
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+.intentsLis {
+
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgb(141, 188, 219);
+    justify-content: flex-start;  
+}
+
+.intent {
+    margin-top: 10%;
+    display: block;
+    justify-content: flex-end;
+    background-color: red;
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    border: 2px;
+    /* margin-left: 2px; */
+    border-radius: 10px;
+}
+/* type of bases buttons */
+.actionButton {
+    height: 80px;
+    width: 80px;
+    border-width: 2px;
+    border-radius: 80px;
+    margin-left: 5%;
+    margin-right: 5%;
+    top: -40px;
+    position: relative;
+}
+
+/* buttons to modify contents */
+#buttonAdd {
+    outline:none;
+    border-color:rgba(32, 0, 121, 0.493);
+    background-color: rgb(202, 217, 247);   
+}
+#buttonDelete {
+    outline: none;
+    border-color: rgb(138, 3, 3);
+    background-color: rgb(202, 217, 247);   
+}
+#buttonEdit {
+    outline:none;
+    border-color: rgb(151, 86, 10);
+    background-color: rgb(202, 217, 247);   
+}

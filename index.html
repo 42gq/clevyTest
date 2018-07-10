@@ -1,20 +1,18 @@
-
 <!DOCTYPE html>
 <html>
     <head>
         <title>ClevyTest</title>
         <script src="body/Buttons.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css" media="all">
+        <link rel="stylesheet" type="text/css" href="/style.css" media="all">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>         
     <body>          
         <script type="text/javascript" src="background.js"></script>
         <div class="cover">
-            <div class="hello"></div>
             <div class="main">
-                    <!-- <button class="list" onclick="console.log(this);console.log(this.parentNode)">Show List</button> -->
-                    <button class="list">Show List</button>
-                <div class="background"></div>
-                <div class="flip-container">
+                <div class="background">
+                    <div class="flip-container">
+                        <button class="list" onclick="MyButtonsFunction()">Show List</button>
                         <div class="flipper">
                             <div class="front">
                                 <!-- front content -->
@@ -26,32 +24,33 @@
                             <!-- back content -->
                             <div class="back">
                                 <div class="boxLis">
-                                    <div class="intentsLis"></div>
-                                    <button class="buttonAdd"></button>
-                                    <button class="buttonDelete"></button>
-                                    <button class="buttonEdit"></button>
+                                    <div class="intentsLis">
+                                            <div class="intent"></div>
+                                    </div>
+                                    <button class="actionButton" onclick="update(10)" id="buttonAdd">Add</button>
+                                    <script>
+                                        jQuery.noConflict()
+                                         jQuery(document).ready(function(){
+                                            jQuery("button.actionButton").click(function(){
+                                                console.log("pute");
+                                                jQuery("div.intent").load("demo_test.txt", function(rightFile){
+                                                    
+                                                });
+                                            });
+                                        });
+                                        console.log("yolo");
+                                            </script>
+                                    <button class="actionButton" onclick="update(0)" id="buttonEdit">Edit</button>
+                                    <button class="actionButton" onclick="update(-10)" id="buttonDelete">Delete</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
+            <div class="header"></div>
             <div class=footer></div>
-            <script>
-                window.onload = () => {
-                    document.querySelector(".list").onclick = () => {
-                        MyButtonsFunction();
-                        var container = document.querySelector('.flip-container');
-                        if (container.style.transform == "rotateY(180deg)")
-                            container.style.transform = "";
-                        else
-                            container.style.transform == "rotateY(180deg)";
-                    }
-                }
-                </script>
+           
         </div>
     </body>
     </html>
-    
-<!---
-    Bonjour!
--->
